@@ -1,7 +1,7 @@
 var numberOfCards = 5;
 
-
-var emptyDeck = [];
+var hand = [];
+var deck = [];
 
 
 var card1 = "pearse";
@@ -10,15 +10,15 @@ var card3 = "table";
 var card4 = "chair";
 var card5 = "remote";
 
-emptyDeck.push(card1, card2, card3, card4, card5);
+deck.push(card1, card2, card3, card4, card5);
 
 
 function probability()
 {
-	if(emptyDeck.length > 0)
+	if(deck.length > 0)
 		{
-		var result = 1/emptyDeck.length;
-		//emptyDeck.pop();
+		var result = 1 / deck.length;
+
 		return result;
 		}
 
@@ -59,14 +59,16 @@ Each card will be an object with a name attribute, numberInDeck attribute, and a
 
 */
 
+
+
 function search(cardValue)
 {
-	for(var i = 0; i < emptyDeck.length; i++)
+	for(var i = 0; i < deck.length; i++)
 	{
-		if(emptyDeck[i] === cardValue)
+		if(deck[i] === cardValue)
 			{
-				console.log("Search is at position " + i + " and its value is " + emptyDeck[i]);
-				emptyDeck.splice(i, 1); //removes the value from the arrau
+				console.log("Search is at position " + i + " and its value is " + deck[i]);
+				deck.splice(i, 1); //removes the value from the arrau
 				break;
 			}
 		else
@@ -76,6 +78,19 @@ function search(cardValue)
 	}
 
 }
+
+function draw()
+	{
+		var card = deck.splice(0, 1).toString();
+		hand.push(card);
+		console.log("You drew a card");
+		return;
+	}
+
+function cardsInHand()
+	{
+		console.log(hand);
+	}
 
 
 
