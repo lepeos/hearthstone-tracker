@@ -431,14 +431,19 @@ for(var i = 0; i < number; i++)
 {
   var name = deck[i].name;
   var prob = deck[i].workout();
-  $('#container').append('<div class = "box">Name: '+ name + ' In Deck: '+ prob +'</div>');
+  var numCardsInDeck = deck[i].getNumberCardsInDeck();
+  $('#container').append('<div class = "box">Name: '+ name + '<br>' + 
+  						 ' In Deck: '+ numCardsInDeck + 
+  						 '<br>' + '<br>' +
+  						 'Probabaility of drawing: ' + prob +
+  						 '</div>');
   
 }
 
 /*$('#container').append(getContainerWidth());
 $('#container').append(getBoxSize());
 $('#container').append(getContainerWidth());*/
-$('#container').append(findDeckLength());
+//$('#container').append(findDeckLength());
 /*********************************************
                                              */
 
@@ -446,13 +451,13 @@ $('#container').append(findDeckLength());
 /*
 This will find the number of items to be displayed and if it is over a certain mount it will expand the width
 */
-if(number <= 15 && number >= 20) 
+if(number <= 15) 
   {
    setContainerWidth('70%');
     setBoxWidth('18%');
   }
 
-else if(number < 20 && number >= 25)
+else if(number > 20 && number < 25)
   {
     setContainerWidth('75%');
     setBoxWidth('16%');
