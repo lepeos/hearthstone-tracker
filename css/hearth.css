@@ -1,6 +1,12 @@
 
 
 
+html, body{  
+  height: 100%;
+  width: 100%;
+  background-color: #55bbff;
+}
+
 .title {
 	margin-top: 5%;
 }
@@ -9,11 +15,30 @@ h1 {
 	text-align: center;
 }
 
-p{
-	text-align: center;
+
+
+#container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 3%;
+  //background-color: #155;
+  position: relative;
 }
 
+.box {
+  height: 18%;
+  width: 18%;
+  background-color: #F5F8F1;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-left: 1%;
+  margin-bottom: 2%;
+  border: 1px solid black;
+  position: relative;
+  
+  font-size: 0.8rem;
 
-.buttons {
-	margin-top: 4%;
+  
 }
