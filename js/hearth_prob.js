@@ -432,9 +432,9 @@ for(var i = 0; i < number; i++)
   var name = deck[i].name;
   var prob = deck[i].workout();
   var numCardsInDeck = deck[i].getNumberCardsInDeck();
-  $('#container').append('<div class = "box">Name: '+ name + '<br>' + 
-  						 ' In Deck: '+ numCardsInDeck + 
-  						 '<br>' + '<br>' +
+  $('#container').append('<div class = "box small-6 medium-3 large-2 columns">Name: '+ name + '<br>' + 
+  						 ' In Deck: '+ numCardsInDeck +
+  						 '<br>' +
   						 'Probabaility of drawing: ' + prob +
   						 '</div>');
   
@@ -451,22 +451,22 @@ $('#container').append(getContainerWidth());*/
 /*
 This will find the number of items to be displayed and if it is over a certain mount it will expand the width
 */
-if(number <= 15) 
-  {
-   setContainerWidth('70%');
-    setBoxWidth('18%');
-  }
+// if(number <= 15) 
+//   {
+//    setContainerWidth('70%');
+//     setBoxWidth('18%');
+//   }
 
-else if(number > 20 && number < 25)
-  {
-    setContainerWidth('75%');
-    setBoxWidth('16%');
-  }
-else
-  {
-    setContainerWidth('90%');
-    setBoxWidth('15%');
-  }
+// else if(number > 20 && number < 25)
+//   {
+//     setContainerWidth('75%');
+//     setBoxWidth('16%');
+//   }
+// else
+//   {
+//     setContainerWidth('90%');
+//     setBoxWidth('15%');
+//   }
 
 
 
